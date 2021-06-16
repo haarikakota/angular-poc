@@ -1,0 +1,135 @@
+.sub-dropdownMenu, .sub-sub-dropdownMenu, .dropdownMenu, .dropdownMenu .dropdownMenu{
+    display: none;
+}
+.dropdown-divider{
+    margin: 0;
+}
+.dropdown-header{
+    margin: 0;
+    padding: 8px;
+    background-color: #aaaaaa !important;
+}
+.nav-link{
+    &::after{
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: "";
+        border-top: .3em solid;
+        border-right: .3em solid transparent;
+        border-bottom: 0;
+        border-left: .3em solid transparent;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+    }
+}
+.dropdown-submenu{
+    &::after{
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: "";
+        border-left: .3em solid;
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        position: absolute;
+        right: 5px;
+        top: 40%;
+    }
+}
+.multiDropDown{
+    padding-left: 10px;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #FFF;
+    background-color: #000;
+}
+.custnavBar{
+    padding: 0;
+    background-color: #aaaaaa !important;
+    .multiDropDown{
+        list-style: none;
+        display: flex;
+        .nav-item{
+            padding: 5px;
+            position: relative;
+            border-left: 2px solid #fff;
+            &:hover{
+                background-color: #000;
+                .dropdownMenu{
+                    position: absolute;
+                    display: block;
+                    width: 150px;
+                    bottom: 0;
+                    left: 0;
+                    top: 100%;
+                    background-color: #aaaaaa !important;
+                    height: 100%;
+                    padding: 0;
+                    border: none;
+                    z-index: 5;
+                    list-style: none;
+                    li{
+                        background-color: #aaaaaa !important;
+                        position: relative;
+                        a{
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            display: block;
+                            width: 150px;
+                            white-space: nowrap;
+                            font-size: 14px;
+                            &:active{
+                                background-color: #e9ecef;
+                            }
+                        }
+                        &:hover{
+                            .sub-dropdownMenu{
+                                display: block;
+                                position: absolute;
+                                display: block;
+                                width: 150px;
+                                left: 100%;
+                                top: 0%;
+                                background-color: #aaaaaa !important;
+                                height: 100%;
+                                padding: 0;
+                                border: none;
+                                z-index: 5;
+                                list-style: none;
+                                li{
+                                    position: relative;
+                                    &:hover{
+                                        .sub-sub-dropdownMenu{
+                                            display: block;
+                                            position: absolute;
+                                            display: block;
+                                            width: 150px;
+                                            left: 100%;
+                                            top: 0%;
+                                            background-color: #aaaaaa !important;
+                                            height: 100%;
+                                            padding: 0;
+                                            border: none;
+                                            z-index: 5;
+                                            list-style: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .nav-link{
+                color: #FFF;
+                padding: 0;
+                padding: 0 5px;
+                font-size: 14px;
+                padding-right: 20px;
+            }
+        }
+    }
+}

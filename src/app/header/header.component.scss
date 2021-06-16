@@ -1,0 +1,59 @@
+.mainNav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    .navBrand {
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #fff;
+    }
+}
+
+
+
+.parent{
+    display: flex;
+    align-items: center;
+    .child{
+        // width: 15%;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px;
+        
+        label{
+            min-width: 100px;
+            padding: 0;
+        }
+        input{
+            max-width: 100px;
+            height: 30px;
+            padding: 5px;
+        }
+        &:nth-child(3){
+            label{
+                min-width: 40px;
+                padding: 0;
+            }
+        }
+    }
+}
+.mb5{
+    margin-bottom: 5px;
+}
+.logotxt{
+    text-align: center;
+    font-size: 30px;
+    text-transform: lowercase;
+    font-family: fantasy;
+}
+.userNmae{
+    padding: 0 10px;
+}
