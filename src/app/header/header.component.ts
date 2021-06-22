@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  signedout : boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  signout(){
+    this.signedout = true;
+    setTimeout(() => {
+      this.signedout = false;
+    }, 5000);
+  }
+
+
+
+
+
 }
+

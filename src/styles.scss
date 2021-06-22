@@ -7,6 +7,7 @@
 }
 .di-flex {
     display: flex!important;
+    flex-wrap: wrap;
 }
 .flex-dir-column {
     flex-direction: column!important;
@@ -26,6 +27,7 @@
 .custrow{
     display: flex;
     flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .justify-contentEnd{
     justify-content: flex-end;

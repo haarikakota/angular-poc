@@ -4,7 +4,7 @@
             <div>
                 <a class="navBrand" href="javascript:;"><b>FermWeb<sup>v 5.0</sup></b></a>
             </div>
-            <div>
+            <div class="filterDiv">
                 <div class="container">
                     <div class="custrow">
                         <div class="">
@@ -54,8 +54,12 @@
             </div>
         </div>
     </div>
-    <div class="di-flex flex-dir-column textLight">
+    <div class="di-flex flex-dir-column textLight userHeading">
         <div class="logotxt">Abbvie</div>
-        <div class="userNmae">Username | <a>Signout</a></div>
+        <div class="userNmae">Username | <a href="javascript:;" (click)="signout()">Signout</a></div>
     </div>
 </nav>
+
+<div class="signedout" *ngIf="signedout">
+    <span>Your successfully signed out</span>
+</div>
