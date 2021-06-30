@@ -1,12 +1,23 @@
 <div class="custnavBar">
     <div class="">
-        <ul class="multiDropDown">
+        <div class="menuIcon" (click)="toggleFilter()">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div>
+                <div [ngClass]="status ? 'success' : 'danger'" (click)="hideFilterfun()">
+                    close
+                </div>
+            </div>
+        </div>
+        <ul class="multiDropDown" [ngClass]="status ? 'success' : 'danger'">
             <li class="nav-item dropdown">
-                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Data Capture </a>
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> Data Capture </a>
                 <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
-                    <li class="dropdown-submenu"><a class="dropdown-item "
-                            href="javascript:;">Ferment</a>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Ferment</a>
                         <ul class="sub-dropdownMenu">
                             <li><a class="dropdown-item" href="javascript:;">New...</a></li>
                             <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
@@ -32,8 +43,7 @@
                             <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item "
-                            href="javascript:;">Western</a>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Western</a>
                         <ul class="sub-dropdownMenu">
                             <li><a class="dropdown-item" href="javascript:;">New...</a></li>
                             <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
@@ -58,8 +68,8 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Maintenance </a>
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> Maintenance </a>
                 <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
                     <h6 class="dropdown-header">Gels/Westerns</h6>
                     <li>
@@ -78,8 +88,8 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reports </a>
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> Reports </a>
                 <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
                     <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Active
                             Runs</a>
@@ -128,8 +138,8 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Other Applications </a>
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> Other Applications </a>
                 <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="javascript:;">Administration</a></li>
                     <li><a class="dropdown-item" href="javascript:;">Biopolymer Calculator</a></li>

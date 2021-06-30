@@ -62,3 +62,14 @@ p {
     }
   }
 }
+@media screen and (max-width: 540px) {
+  .ferTable{
+    .ferHead{
+        .secondDiv{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap !important;
+        }
+    } 
+  }   
+}

@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
+  showFilter : boolean = false;
+  hideFilter : boolean = false;
+  status: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleFilter(){
+    this.status = !this.status;
+  }
+  hideFilterfun(){
+    this.status = !this.status;
   }
 
 }

@@ -148,3 +148,73 @@
         }
     }
 }
+.menuIcon{
+    display: none;
+}
+
+
+@media screen  and (max-width: 720px){
+    .custnavBar{
+        padding: 5px;
+        .menuIcon{
+            display: flex;
+            justify-content: space-between;
+            div{
+                display: flex;
+                flex-direction: column;
+                .danger{
+                    display: none;
+                }
+                span{
+                    width: 30px;
+                    height: 4px;
+                    background-color: black;
+                    margin: 2px 0;
+                }
+            }
+            
+        }
+        .multiDropDown{
+            display: flex;
+            flex-direction: column;
+            .nav-item{
+                border-left: 0;
+                border-bottom: 2px solid #fff;
+                &:hover {
+                    .dropdownMenu{
+                        width: 100%;
+                        li{
+                            a{
+                                width: 100%;
+                            }
+                            &:hover {
+                                .sub-dropdownMenu{
+                                    left: 10%;
+                                    width: 90%;
+                                    box-shadow: 0 0 5px #000;
+                                    li{
+                                        &:hover{
+                                            .sub-sub-dropdownMenu{
+                                                left: 15%;
+                                                width: 85%;
+                                                box-shadow: 0 0 5px #000;
+                                            }                                    
+                                        }
+                                    }                                  
+    
+                                }
+                            }
+                        }
+                    }
+                        
+                }
+            }
+        }
+        .multiDropDown.danger{
+            display: none;
+        }
+    }
+    
+    
+    
+}
