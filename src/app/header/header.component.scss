@@ -61,6 +61,11 @@
 }
 .userNmae{
     padding: 0 10px;
+    span{
+        padding-right: 5px;
+        border-right: 2px solid #FFF;
+        margin-right: 5px;
+    }
     a{
         color: #FFF;
         &:hover{
@@ -94,14 +99,19 @@
 @media screen and (max-width: 941px) {
     .userHeading{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 10px;
+        right: 10px;
     }
     .filterDiv{
         margin-top: 45px;
         .container{
             width: 100%;
             max-width: 100%;
+        }
+    }
+    .parent{
+        .child{
+            margin-right: 0;
         }
     }
 
@@ -111,6 +121,22 @@
 @media screen and (max-width: 767px) {
     .logotxt{
         font-size: 20px;
+        position: relative;
+        padding-right: 20px;
+        &::after{
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+
+        }
     }
     .parent{
         .child{
@@ -140,7 +166,38 @@
     .custrow, .parent{
         width: 100%;
         display: flex;
-        flex-wrap: nowrap;
+        // flex-wrap: nowrap;
+    }
+    .userHeading{
+        &:hover{
+            .userNmae{
+                display: flex;
+            }
+        }
+        .userNmae{
+            padding: 10px;
+            background-color: #aaaaaa;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            span{
+                border-right: none;
+                margin-right: 0;
+                padding-right: 0;
+                cursor: pointer;
+                &:hover{
+                    color: #000;
+                }
+            }
+            a{
+                color: #FFF;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
     }
 }
 
@@ -148,11 +205,13 @@
     .parent{
         .child{
             width: 48%;
+            display: flex;
+            flex-wrap: nowrap;
         }
     }
     .filterDiv{
         margin-top: 25px;
         width: 100%;
-    }
+    }  
     
 }
