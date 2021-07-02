@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Router } from "@angular/router";
-// import { auth } from 'firebase/app';
-import { AngularFireAuth } from "@angular/fire/auth";
-// import { User } from 'firebase/app';
-import "firebase/auth";
+// import { auth } from 'firebase';
+import User from "firebase"
+import { AngularFireAuth } from '@angular/fire/auth';
+import firebase from 'firebase/app';
 
-// import User auth from 'firebase/app';
+
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +27,12 @@ export class AuthService {
   async login(email: string, password: string) {
     // var result = await this.afAuth.auth.signInWithEmailAndPassword(email, password)
     // this.router.navigate(['home']);
+  }
+
+  async logout() {
+    // await this.afAuth.auth.signOut();
+    // localStorage.removeItem('user');
+    // this.router.navigate(['admin/login']);
   }
 
 

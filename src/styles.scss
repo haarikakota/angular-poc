@@ -32,3 +32,12 @@
 .justify-contentEnd{
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 767px) {
+    .dataTables_wrapper .dataTables_paginate .paginate_button{
+        padding: 5px !important;
+    }
+    .dataTables_wrapper .dataTables_filter input{
+        height: 24px !important;
+    }
+}
