@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  signedout : boolean = false;
+
+  constructor(public authservice: AuthService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.toastr.success('Login successfully');
   }
 
 }
+

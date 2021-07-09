@@ -1,152 +1,175 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+<div class="custnavBar">
+    <div class="">
+        <div class="menuIcon" (click)="toggleFilter()">
+            <!-- <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
+            <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                <svg width="30" height="30" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+              </button>
+            <!-- <div>
+                <div [ngClass]="status ? 'success' : 'danger'" (click)="hideFilterfun()">
+                    close
+                </div>
+            </div> -->
+        </div>
+        <ul class="multiDropDown" [ngClass]="status ? 'success' : 'danger'">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"> Data Capture </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Ferment</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Ferment</a>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Virus
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Virus
                             Preparation</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">DNA
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">DNA
                             Preparation</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Gel</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Gel</a>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Western</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Western</a>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Clone</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Clone</a>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Cell Line</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">New...</a></li>
-                            <li><a class="dropdown-item" href="#">Edit...</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Cell
+                            Line</a>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">New...</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Edit...</a></li>
                         </ul>
                     </li>
-                    <li><a class="dropdown-item" href="#">Stock
+                    <li><a class="dropdown-item" href="javascript:;">Stock
                             Inventory</a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"> Maintenance </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
                     <h6 class="dropdown-header">Gels/Westerns</h6>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Media
+                    <li><a class="dropdown-item" href="javascript:;">Media</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Microbial Growth
+                    <li><a class="dropdown-item" href="javascript:;">Microbial Growth</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Insect/Mammalian
+                    <li><a class="dropdown-item" href="javascript:;">Insect/Mammalian</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Clones
+                    <li><a class="dropdown-item" href="javascript:;">Clones</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>General
+                    <li><a class="dropdown-item" href="javascript:;">General</a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"> Reports </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Active Runs</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">All</a></li>
-                            <li><a class="dropdown-item" href="#">Microbial</a></li>
-                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                    href="#">Insect/Mammalian</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">All Groups</a></li>
-                                    <li><a class="dropdown-item" href="#">GPS-LC: Biologics</a></li>
-                                    <li><a class="dropdown-item" href="#">GPS-LC: Small-molecule</a></li>
-                                    <li><a class="dropdown-item" href="#">GPS-ABC: Biologics</a></li>
-                                    <li><a class="dropdown-item" href="#">BDB: Biologics</a></li>
+                <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="javascript:;">Active
+                            Runs</a>
+                        <ul class="sub-dropdownMenu">
+                            <li><a class="dropdown-item" href="javascript:;">All</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Microbial</a></li>
+                            <li class="dropdown-submenu"><a class="dropdown-item "
+                                    href="javascript:;">Insect/Mammalian</a>
+                                <ul class="sub-sub-dropdownMenu">
+                                    <li><a class="dropdown-item" href="javascript:;">All Groups</a></li>
+                                    <li><a class="dropdown-item" href="javascript:;">GPS-LC: Biologics</a></li>
+                                    <li><a class="dropdown-item" href="javascript:;">GPS-LC: Small-molecule</a></li>
+                                    <li><a class="dropdown-item" href="javascript:;">GPS-ABC: Biologics</a></li>
+                                    <li><a class="dropdown-item" href="javascript:;">BDB: Biologics</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="#">My Ferments</a></li>
-                            <li><a class="dropdown-item" href="#">Intended Use</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">My Ferments</a></li>
+                            <li><a class="dropdown-item" href="javascript:;">Intended Use</a></li>
                         </ul>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Fermentation
+                    <li><a class="dropdown-item" href="javascript:;">Fermentation</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Clone
+                    <li><a class="dropdown-item" href="javascript:;">Clone</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">Gel/Western</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Gel/Western
+                    <li><a class="dropdown-item" href="javascript:;">Paste Inventory</a>
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Paste Inventory
-                    </li>
-                    <li><a class="dropdown-item" href="#"></a>Media Recipe
+                    <li><a class="dropdown-item" href="javascript:;">Media Recipe</a>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>DNA Preparation</li>
+                    <li><a class="dropdown-item" href="javascript:;">DNA Preparation</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Virus</li>
-                    <li><a class="dropdown-item" href="#"></a>Virus Preparation</li>
+                    <li><a class="dropdown-item" href="javascript:;">Virus</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">Virus Preparation</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"></a>Cell Line</li>
+                    <li><a class="dropdown-item" href="javascript:;">Cell Line</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link " href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"> Other Applications </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#"></a>Administration</li>
-                    <li><a class="dropdown-item" href="#"></a>Biopolymer Calculator</li>
-                    <li><a class="dropdown-item" href="#"></a>BioELN Finder</li>
-                    <li><a class="dropdown-item" href="#"></a>BRS(Biologics Request System)</li>
-                    <li><a class="dropdown-item" href="#"></a>ChemInvWeb</li>
-                    <li><a class="dropdown-item" href="#"></a>eCOT Creator</li>
-                    <li><a class="dropdown-item" href="#"></a>eCOT Viewer</li>
-                    <li><a class="dropdown-item" href="#"></a>FermWeb</li>
-                    <li><a class="dropdown-item" href="#"></a>GBRS</li>
-                    <li><a class="dropdown-item" href="#"></a>GP-Pharmacy</li>
-                    <li><a class="dropdown-item" href="#"></a>Peptide Synthesis</li>
-                    <li><a class="dropdown-item" href="#"></a>PortCharWeb</li>
-                    <li><a class="dropdown-item" href="#"></a>PortPureWeb</li>
-                    <li><a class="dropdown-item" href="#"></a>ProteinWeb</li>
-                    <li><a class="dropdown-item" href="#"></a>Structural Chemistry</li>
-                    <li><a class="dropdown-item" href="#"></a>VectorWeb</li>
-                    <li><a class="dropdown-item" href="#"></a>VirusWeb</li>
+                <ul class="dropdownMenu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="javascript:;">Administration</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">Biopolymer Calculator</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">BioELN Finder</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">BRS(Biologics Request System)</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">ChemInvWeb</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">eCOT Creator</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">eCOT Viewer</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">FermWeb</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">GBRS</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">GP-Pharmacy</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">Peptide Synthesis</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">PortCharWeb</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">PortPureWeb</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">ProteinWeb</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">Structural Chemistry</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">VectorWeb</a></li>
+                    <li><a class="dropdown-item" href="javascript:;">VirusWeb</a></li>
                 </ul>
+            </li>
+            <li>
+                <label class="inputLabel" for="fash">F#</label> <input id="fash" type="text" class="inputsearch">
             </li>
         </ul>
     </div>
-</nav>
+</div>

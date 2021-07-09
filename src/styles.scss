@@ -2,3 +2,42 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 
+.bag-dark {
+    background-color: #212529!important;
+}
+.di-flex {
+    display: flex!important;
+    flex-wrap: wrap;
+}
+.flex-dir-column {
+    flex-direction: column!important;
+}
+.textLight {
+    color: #f8f9fa!important;
+}
+.justifyContentBetween {
+    justify-content: space-between!important;
+}
+.container{
+    width: 100%;
+}
+.align-items-start {
+    align-items: flex-start!important;
+}
+.custrow{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+}
+.justify-contentEnd{
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    .dataTables_wrapper .dataTables_paginate .paginate_button{
+        padding: 5px !important;
+    }
+    .dataTables_wrapper .dataTables_filter input{
+        height: 24px !important;
+    }
+}

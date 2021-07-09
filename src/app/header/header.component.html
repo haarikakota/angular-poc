@@ -1,41 +1,65 @@
-<nav class="navbar navbar-dark bg-dark d-flex flex-nowrap justify-content-between">
-    <div class="d-flex flex-column text-light">
-        <div class="d-flex align-items-start">
+<nav class="mainNav bag-dark di-flex flex-nowrap justifyContentBetween">
+    <div class="di-flex flex-dir-column textLight">
+        <div class="di-flex align-items-start">
             <div>
-                <a class="navbar-brand" href="#"><b>FermWeb<sup>v 5.0</sup></b></a>
+                <a class="navBrand" href="javascript:;"><b>FermWeb<sup>v 5.0</sup></b></a>
             </div>
-            <div>
+            <div class="filterDiv">
                 <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <label for="staticEmail" class="text-light col-form-label">Order#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
-                            <label for="staticEmail" class="text-light">Purification#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
-                            <label for="staticEmail" class="text-light">D#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
-                            <label for="staticEmail" class="text-light">PR-/DC-#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
+                    <div class="custrow">
+                        <div class="">
+                            <div class="parent mb5">
+                                <div class="child">
+                                    <label for="Order" class="textLight col-form-label">Order#</label>
+                                    <input class="" type="text" name="" id="Order">
+                                </div>
+                                <div class="child">
+                                    <label for="Purification" class="textLight">Purification#</label>
+                                    <input class="" type="text" name="" id="Purification">
+                                </div>
+                                <div class="child">
+                                    <label for="dash" class="textLight">D#</label>
+                                    <input class="" type="text" name="" id="dash">
+                                </div>
+                                <div class="child">
+                                    <label for="prdc" class="textLight">PR-/DC-#</label>
+                                    <input class="" type="text" name="" id="prdc">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="staticEmail" class="text-light">Ferment#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
-                            <label for="staticEmail" class="text-light">Sample#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
-                            <label for="staticEmail" class="text-light">V#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
-                            <label for="staticEmail" class="text-light">Lot#</label>
-                            <input class="col-sm-1" type="text" name="" id="">
+                    <div class="custrow">
+                        <div class="">
+                            <div class="parent">
+                                <div class="child">
+                                    <label for="staticEmail" class="textLight">Ferment#</label>
+                                    <input class="" type="text" name="" id="">
+                                </div>
+                                <div class="child">
+                                    <label for="staticEmail" class="textLight">Sample#</label>
+                                    <input class="" type="text" name="" id="">
+                                </div>
+                                <div class="child">
+                                    <label for="staticEmail" class="textLight">V#</label>
+                                    <input class="" type="text" name="" id="">
+                                </div>
+                                <div class="child">
+                                    <label for="staticEmail" class="textLight">Lot#</label>
+                                    <input class="" type="text" name="" id="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-flex flex-column text-light">
-        <div>Abbvie</div>
-        <div>Username | <a>Signout</a></div>
+    <div class="di-flex flex-dir-column textLight userHeading">
+        <div class="logotxt">Abbvie</div>
+        <div class="userNmae"><span>Username</span> <a href="javascript:;" (click)="authservice.singout()">Signout</a></div>
     </div>
 </nav>
+
+<div class="signedout" *ngIf="signedout">
+    <span>Your successfully signed out</span>
+</div>

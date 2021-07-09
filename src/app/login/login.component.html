@@ -1,0 +1,14 @@
+<div class="bg-img">
+  <form (ngSubmit)="login()" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" [(ngModel)]="emailId" placeholder="Enter Email" name="email">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" [(ngModel)]="entPasswrd" placeholder="Enter Password" name="psw">
+
+    <button type="submit" class="btn">Login</button>
+    <span class="errorText">{{serverStatus}}</span>
+  </form>
+</div>
